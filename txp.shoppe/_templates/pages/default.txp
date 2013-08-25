@@ -45,10 +45,10 @@
 <!-- Google font API (remove this if you intend to use the theme in a project without internet access) -->
 <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/foundation.css">
-<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/app.css">
+<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/css/foundation.css">
+<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/css/app.css">
 
-<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/offcanvas.css">
+<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/css/offcanvas.css">
 
 <!-- Supersized bg image rotator:
 <link rel="stylesheet" href="<txp:site_url />txp.shoppe/supersized/css/supersized.core.css">

@@ -1,9 +1,9 @@
 <!-- Included JS Files (Compressed) -->
-<script src="<txp:site_url />txp.shoppe/foundation/javascripts/jquery.js"></script>
-<script src="<txp:site_url />txp.shoppe/foundation/javascripts/foundation.min.js"></script>
+<script src="<txp:site_url />txp.shoppe/foundation/js/vendor/jquery.js"></script>
+<script src="<txp:site_url />txp.shoppe/foundation/js/foundation.min.js"></script>
   
 <!-- Initialize JS Plugins -->
-<script src="<txp:site_url />txp.shoppe/foundation/javascripts/app.js"></script>
+<script src="<txp:site_url />txp.shoppe/foundation/js/app.js"></script>
 
 
 <!-- 
