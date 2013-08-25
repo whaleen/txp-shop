@@ -1,23 +1,54 @@
-<article role="article" itemscope itemtype="http://schema.org/Article">
-
-<!-- if not an individual article then make the title h1 a link -->
 <txp:if_individual_article>
-  <h1 itemprop="name"><txp:title /></h1>
-<txp:else />
-  <h1 itemprop="name"><a href="<txp:permlink />" itemprop="url"><txp:title /></a></h1>
+
+		<div class="large-12 columns">
+		
+			<div class="row">
+          
+	        	<div class="large-6 columns">
+	            <txp:article_image class="product-edges" /> 
+	            <img src="http://placehold.it/1000x1000&text=Thumbnail" />
+				</div>
+
+
+	        	<div class="large-6 columns">
+                <h2><txp:title /></h2>
+                <h4 class="subheader"><txp:yab_shop_price /></h4>
+                <txp:yab_shop_property_prices />
+				<txp:yab_shop_add />
+				</div>
+				
+
+			</div>
+
+
+			<div class="row">
+				<div class="large-12 columns">
+				<txp:body />
+				</div>
+			</div>
+
+			
+
+                
+		</div>
+
+	<txp:else /> 
+
+	<txp:permlink>	
+	<div class="large-4 small-6 columns">
+		
+	<txp:if_article_image>
+	<txp:article_image /> 
+	<txp:else />
+	<img src="http://placehold.it/1000x1000&text=Thumbnail" />
+	</txp:if_article_image>	
+ 
+    <div class="panel">
+    <h5><txp:title /></h5>
+    <h6 class="subheader"><txp:yab_shop_price /></h6>
+    </div>
+
+    </div>
+	</txp:permlink>
+
 </txp:if_individual_article>
-
-
-  <div itemprop="articleBody">
-    <txp:body />
-  </div>
-
-
-<!-- only display categories if they are actually set for a product, otherwise omit -->
-  <txp:if_article_category>
-    <br><strong><txp:text item="categories" /></strong> <span itemprop="keywords"><txp:category1 title="1" link="1" /><txp:if_article_category number="1"><txp:if_article_category number="2">, </txp:if_article_category></txp:if_article_category><txp:category2 title="1" link="1" /></span>
-  </txp:if_article_category>
-
-  </p>
-
-</article>

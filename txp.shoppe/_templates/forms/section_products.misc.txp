@@ -1,19 +1,71 @@
-<txp:output_form form="snip_shop_navigation" />
+<div class="row">
+    <div class="large-12 columns">
+ 
+    <!-- Navigation -->
+ 
+      <div class="row">
+        <div class="large-12 columns">
+ 
+          <nav class="top-bar">
+            <ul class="title-area">
+              <!-- Title Area -->
+              <li class="name">
+                <h1>
+                  <a href="<txp:site_url />">
+                    <txp:site_name />
+                  </a>
+                </h1>
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            </ul>
+         
+            <section class="top-bar-section">
+              <!-- Right Nav Section -->
+              <ul class="right">
+                <li class="divider"></li>
+                
+                
+                 <li class="has-dropdown">
+              <a href="#"><txp:if_section name="products">Browse<txp:else />Continue Browsing</txp:if_section></a>
+ 
+              <ul class="dropdown">
+				<txp:category_list parent="product" exclude="product" wraptag="ul" break="">
+				<li<txp:if_category name='<txp:category />'> class="active"</txp:if_category>>
+				<txp:category section="products" title="1" link="1" />
+</li>
+</txp:category_list>
+
+              </ul>
+
+                
+                
+                
+              </ul>
+            </section>
+          </nav>
+          <!-- End Top Bar -->
+        </div>
+      </div>
+ 
+    <!-- End Navigation -->
  
       <div class="row">
  
   <!-- Side Bar -->
  
-        <div class="four mobile-four columns">
-  
-
-
-
-
-
-
+        <div class="large-4 small-12 columns">
+ 
+          <img src="http://placehold.it/500x500&text=Logo">
+ 
           <div class="hide-for-small panel">
-            <h3>Cart</h3>
+            <h3><txp:site_name /></h3>
+            <h5 class="subheader"><txp:site_slogan />
+            </h5>
+          </div>
+ 
+ 
+ <div class="panel">
+         <h3>Cart</h3>
     
     <p>
     <txp:yab_shop_cart>
@@ -21,106 +73,50 @@
 	</txp:yab_shop_cart>
 	</p>        
 
-
-
-
-<p><a href="<txp:site_url />checkout" class="success button">Proceed to Checkout</a></p>
-
-
-
-          </div>
+	<p><a href="<txp:site_url />checkout" class="success radius button">Proceed to Checkout</a></p>
+ </div>
  
-<ul class="accordion">
-<txp:related_articles break=""> 
-  <li>
-    <div class="title">
-      <h5><txp:title /></h5>
     </div>
-    <div class="content">
-      <txp:body />
-    </div>
-  </li>
-</txp:related_articles>
-</ul>
- 
-
- 
-        </div>
  
     <!-- End Side Bar -->
  
  
+    <!-- Thumbnails -->
  
-<txp:if_individual_article>
+        <div class="large-8 columns">
 
-        <div class="eight columns">
-          <div id="product-container" class="row">
-          
-          <txp:article>
-            <div class="product">
-
-
-              <div class="panel">
-	            <txp:article_image class="product-edges" /> 
-	            <img src="<txp:site_url />img/no-image.jpg" />
-                <h2><txp:title /></h2>
-                <h4 class="subheader"><txp:yab_shop_price /></h4>
-                <txp:yab_shop_property_prices />
-                <txp:body />
-
-                <txp:yab_shop_add />
-
-              </div>
-            </div>
-          </txp:article>
-
-
-
-<txp:else /> 
-
-
-<!-- Product Thumbnails -->
- 
-        <div class="eight columns">
-          <div id="product-container" class="row">
-
-          <txp:article category="<txp:category />">
-                    
-            <div class="four mobile-two columns product">
-
-			<txp:permlink>
-              <div class="panel">
-				
-				<txp:if_article_image>
-			            <txp:article_image /> 
-		            <txp:else />
-						<img src="<txp:site_url />img/no-image.jpg" />
-				</txp:if_article_image>	
-				
-                <h3 class="responsive-header"><txp:title /></h3>
-                <h4 class="subheader"><txp:yab_shop_price /></h4>
-              </div>
-            </txp:permlink>
-            
-            </div>
-          </txp:article>
+          <div class="row">
+			<txp:article form="product" /> 
+          </div>
  
     <!-- End Thumbnails -->
-    
-    
-    
-</txp:if_individual_article>
- 
-    
  
  
-
+    <!-- Managed By -->
+          <div class="row">
+            <div class="large-12 columns">
+              <div class="panel">
+                <div class="row">
+ 
+                  <div class="large-2 small-6 columns">
+                    <img src="http://placehold.it/300x300&text=Site Owner">
+                  </div>
+ 
+                  <div class="large-10 small-6 columns">
+                    <strong>This Site Is Managed By<hr/></strong>
+ 
+                    Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis
+                  </div>
+ 
+                </div>
+              </div>
+            </div>
+ 
+    <!-- End Managed By -->
  
           </div>
         </div>
       </div>
-      
-    
  
     </div>
   </div>
