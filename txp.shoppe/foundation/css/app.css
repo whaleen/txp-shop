@@ -28,11 +28,11 @@
 html {box-shadow: inset 1px 1px 20px #333;
 }
 body {font-family: sans-serif;
-background-image: url('../../../img/canvas/light.png');
+background-image: url('img/canvas/light.png');
 }
 
 #bravo-guarantee {
-background-image: url('../../../img/canvas/medium.png')!important;
+background-image: url('img/canvas/medium.png')!important;
 }
 
 .product-edges {
@@ -40,7 +40,7 @@ box-shadow: inset 3px 10px 15px 10px #666!important;
 }
 
 .panel {
-background-image: url('../../../img/canvas/medium.png');
+background-image: url('img/canvas/medium.png');
 box-shadow: 1px 0px 9px 0px #999;
 }
 
@@ -61,7 +61,7 @@ font-size: 18px!important;
 }
 
 .nav-bar {
-background-image: url('../../../img/leather/black-strap.jpg');
+background-image: url('img/leather/black-strap.jpg');
 background-color: #000;
 margin-top: 0;
 width: 100%;
@@ -82,7 +82,7 @@ color: #fff;
 
 
 .top-bar {
-background-image: url('../../../img/leather/black-strap.jpg');
+background-image: url('img/leather/black-strap.jpg');
 box-shadow: inset 1px 1px 2px #111;
 box-shadow: 0px 1px 15px 0px #999;
 }
@@ -100,7 +100,7 @@ nav {font-family: Arial;}
 
 
 .article {
-background-image: url('../../../img/canvas/light.png');
+background-image: url('img/canvas/light.png');
 padding: 10px;
 }
 
