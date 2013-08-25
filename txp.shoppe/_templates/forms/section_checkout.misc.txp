@@ -1,4 +1,4 @@
-<txp:output_form form="snip_shop_navigation" />
+<txp:output_form form="snip_primary_navigation" />
 
 <txp:yab_shop_cart></txp:yab_shop_cart>
 
