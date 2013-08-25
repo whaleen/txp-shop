@@ -1,0 +1,126 @@
+<txp:output_form form="snip_shop_navigation" />
+ 
+      <div class="row">
+ 
+  <!-- Side Bar -->
+ 
+        <div class="four mobile-four columns">
+  
+
+
+
+
+
+
+          <div class="hide-for-small panel">
+            <h3>Cart</h3>
+    
+    <p>
+    <txp:yab_shop_cart>
+	<txp:yab_shop_cart_subtotal />
+	</txp:yab_shop_cart>
+	</p>        
+
+
+
+
+<p><a href="<txp:site_url />checkout" class="success button">Proceed to Checkout</a></p>
+
+
+
+          </div>
+ 
+<ul class="accordion">
+<txp:related_articles break=""> 
+  <li>
+    <div class="title">
+      <h5><txp:title /></h5>
+    </div>
+    <div class="content">
+      <txp:body />
+    </div>
+  </li>
+</txp:related_articles>
+</ul>
+ 
+
+ 
+        </div>
+ 
+    <!-- End Side Bar -->
+ 
+ 
+ 
+<txp:if_individual_article>
+
+        <div class="eight columns">
+          <div id="product-container" class="row">
+          
+          <txp:article>
+            <div class="product">
+
+
+              <div class="panel">
+	            <txp:article_image class="product-edges" /> 
+	            <img src="<txp:site_url />img/no-image.jpg" />
+                <h2><txp:title /></h2>
+                <h4 class="subheader"><txp:yab_shop_price /></h4>
+                <txp:yab_shop_property_prices />
+                <txp:body />
+
+                <txp:yab_shop_add />
+
+              </div>
+            </div>
+          </txp:article>
+
+
+
+<txp:else /> 
+
+
+<!-- Product Thumbnails -->
+ 
+        <div class="eight columns">
+          <div id="product-container" class="row">
+
+          <txp:article category="<txp:category />">
+                    
+            <div class="four mobile-two columns product">
+
+			<txp:permlink>
+              <div class="panel">
+				
+				<txp:if_article_image>
+			            <txp:article_image /> 
+		            <txp:else />
+						<img src="<txp:site_url />img/no-image.jpg" />
+				</txp:if_article_image>	
+				
+                <h3 class="responsive-header"><txp:title /></h3>
+                <h4 class="subheader"><txp:yab_shop_price /></h4>
+              </div>
+            </txp:permlink>
+            
+            </div>
+          </txp:article>
+ 
+    <!-- End Thumbnails -->
+    
+    
+    
+</txp:if_individual_article>
+ 
+    
+ 
+ 
+
+ 
+          </div>
+        </div>
+      </div>
+      
+    
+ 
+    </div>
+  </div>

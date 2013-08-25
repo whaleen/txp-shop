@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="<txp:lang />">
+
+<head>
+<meta charset="utf-8">
+
+<!-- page title and metas, no meta keywords as they are now obsolete -->
+  <title><txp:page_title /></title>
+  <meta name="description" content="">
+  <txp:if_search>
+    <meta name="robots" content="none">
+  <txp:else />
+  <txp:if_category>
+    <meta name="robots" content="noindex, follow, noodp, noydir">
+  <txp:else />
+  <txp:if_author>
+    <meta name="robots" content="noindex, follow, noodp, noydir">
+  <txp:else />
+    <meta name="robots" content="index, follow, noodp, noydir">
+  </txp:if_author>
+  </txp:if_category>
+  </txp:if_search>
+
+<!-- mobile viewport optimised, more info: http://h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- content feeds -->
+  <txp:feed_link flavor="atom" format="link" label="Atom" />
+  <txp:feed_link flavor="rss" format="link" label="RSS" />
+  <txp:rsd />
+
+<!-- specify canonical, more info: http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html -->
+  <txp:if_section name="">
+    <link rel="canonical" href="<txp:site_url />">
+  <txp:else />
+    <txp:if_individual_article>
+      <link rel="canonical" href="<txp:permlink />">
+    <txp:else />
+      <link rel="canonical" href="<txp:section url='1' />">
+    </txp:if_individual_article>
+  </txp:if_section>
+
+
+<!-- css -->
+<!-- Google font API (remove this if you intend to use the theme in a project without internet access) -->
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/foundation.css">
+<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/app.css">
+
+<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/offcanvas.css">
+
+<!-- Supersized bg image rotator:
+<link rel="stylesheet" href="<txp:site_url />txp.shoppe/supersized/css/supersized.core.css">
+-->
+
+<!-- HTML5/Media Queries support for IE < 9 (you can remove this section and the corresponding 'js' directory files if you don't intend to support IE < 9) -->
+  <!--[if lt IE 9]>
+    <script src="<txp:site_url />js/html5shiv.js"></script>
+    <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+</head>
+
+
+
+<body id="<txp:if_section name=""><txp:if_search>search<txp:else />front</txp:if_search><txp:else /><txp:section /></txp:if_section>-page">
+
+<!-- Masthead: Global  -->
+<txp:output_form form="snip_header_nav" />
+
+<div class="wrapper">
+	<div class="row">
+
+	<txp:if_section name="checkout">
+	<txp:output_form form="section_checkout" />
+	</txp:if_section>	
+		
+	<txp:if_section name="default">
+	<txp:output_form form="section_default" />
+	</txp:if_section>
+	
+	<txp:if_section name="products">
+	<txp:output_form form="section_products" />
+	</txp:if_section>	
+
+	</div> <!-- /.row -->
+</div> <!-- /.wrapper -->
+
+
+<!-- Footer -->
+<txp:output_form form="snip_footer" />
+
+<!-- Dragon's Breath -->
+<txp:output_form form="snip_dragons_breath" />
+
+</body>
+</html>

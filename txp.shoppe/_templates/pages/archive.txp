@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="<txp:lang />">
+
+<head>
+  <meta charset="utf-8">
+
+<!-- page title and metas, no meta keywords as they are now obsolete -->
+  <title><txp:page_title /></title>
+  <meta name="description" content="">
+  <meta name="generator" content="Textpattern CMS">
+  <meta name="robots" content="noindex, follow, noodp, noydir">
+
+<!-- mobile viewport optimised, more info: http://h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <txp:if_individual_article>
+<!-- add meta author for individual articles -->
+    <txp:meta_author title="1" />
+  </txp:if_individual_article>
+
+<!-- content feeds -->
+  <txp:feed_link flavor="atom" format="link" label="Atom" />
+  <txp:feed_link flavor="rss" format="link" label="RSS" />
+  <txp:rsd />
+
+<!-- specify canonical, more info: http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html -->
+  <txp:if_individual_article>
+    <link rel="canonical" href="<txp:permlink />">
+  <txp:else />
+    <link rel="canonical" href="<txp:section url='1' />">
+  </txp:if_individual_article>
+
+<!-- css -->
+	<!-- Google font API (remove this if you intend to use the theme in a project without internet access) -->
+	<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/foundation.css">
+	<link rel="stylesheet" href="<txp:site_url />txp.shoppe/foundation/stylesheets/app.css">
+
+<!-- HTML5/Media Queries support for IE < 9 (you can remove this section and the corresponding 'js' directory files if you don't intend to support IE < 9) -->
+  <!--[if lt IE 9]>
+    <script src="<txp:site_url />js/html5shiv.js"></script>
+    <script src="<txp:site_url />js/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+</head>
+
+<body id="<txp:section />-page">
+
+
+
+
+<txp:output_form form="snip_header_nav" />
+
+
+
+
+
+
+
+
+
+
+  <div class="wrapper">
+    <div class="row">
+
+<!-- left (main) column -->
+      <div role="main" class="six columns">
+
+        <txp:if_article_list><h1><txp:section title="1" /></h1></txp:if_article_list>
+
+        <txp:article listform="article_listing" limit="5" />
+        <!-- or if you want to list all articles from all sections instead, then replace txp:article with txp:article_custom -->
+
+        <!-- add pagination links to foot of article/article listings if there are more articles available,
+          this method is more flexibile than using simple txp:link_to_prev/txp:link_to_next or txp:older/txp:newer tags -->
+        <p id="paginator">
+
+        <txp:if_individual_article>
+
+          <txp:variable name="prev" value='<txp:link_to_prev />' />
+          <txp:variable name="next" value='<txp:link_to_next />' />
+
+          <txp:if_variable name="prev" value="">
+            <span id="paginator-l" class="button disabled">&#8592; <txp:text item="older" /></span>
+          <txp:else />
+            <a id="paginator-l" href="<txp:link_to_prev />" title="<txp:prev_title />" class="button">&#8592; <txp:text item="older" /></a>
+          </txp:if_variable>
+          <txp:if_variable name="next" value="">
+            <span id="paginator-r" class="button disabled"><txp:text item="newer" /> &#8594;</span>
+          <txp:else />
+            <a id="paginator-r" href="<txp:link_to_next />" title="<txp:next_title />" class="button"><txp:text item="newer" /> &#8594;</a>
+          </txp:if_variable>
+
+        <txp:else />
+
+          <txp:variable name="prev" value='<txp:older />' />
+          <txp:variable name="next" value='<txp:newer />' />
+          <txp:if_variable name="prev" value="">
+            <span id="paginator-l" class="button disabled">&#8592; <txp:text item="older" /></span>
+          <txp:else />
+            <a id="paginator-l" href="<txp:older />" title="<txp:text item='older' />" class="button">&#8592; <txp:text item="older" /></a>
+          </txp:if_variable>
+          <txp:if_variable name="next" value="">
+            <span id="paginator-r" class="button disabled"><txp:text item="newer" /> &#8594;</span>
+          <txp:else />
+            <a id="paginator-r" href="<txp:newer />" title="<txp:text item='newer' />" class="button"><txp:text item="newer" /> &#8594;</a>
+          </txp:if_variable>
+
+        </txp:if_individual_article>
+
+        </p>
+
+      </div> <!-- /main -->
+
+
+
+
+<!-- right (complementary) column -->
+<div role="complementary" class="six columns">
+<txp:output_form form="snip_complementary" />
+</div> <!-- /complementary -->
+
+
+
+</div> <!-- /.container -->
+</div> <!-- /.wrapper -->
+
+
+<txp:output_form form="snip_footer" />
+    
+    
+<!-- JavaScript at the bottom for fast page loading, more info: http://developer.yahoo.com/performance/rules.html#js_bottom -->
+
+<txp:output_form form="snip_dragons_breath" />
+
+</body>
+</html>
