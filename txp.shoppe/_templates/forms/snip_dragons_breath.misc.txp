@@ -1,61 +1,35 @@
-<!-- Included JS Files (Compressed) -->
-<script src="<txp:site_url />txp.shoppe/foundation/js/vendor/jquery.js"></script>
-<script src="<txp:site_url />txp.shoppe/foundation/js/foundation.min.js"></script>
-  
-<!-- Initialize JS Plugins -->
-<script src="<txp:site_url />txp.shoppe/foundation/js/app.js"></script>
-
-
-<!-- 
-<script src="<txp:site_url />txp.shoppe/supersized/js/supersized.core.3.2.1.js"></script>
-
-	
- Photo credit!!
-<script type="text/javascript">
-			
-	jQuery(function($){
-				
-			$.supersized({
-				slides : [ 
-					{image : '<txp:site_url />img/bg/2.jpg'},
-					{image : '<txp:site_url />img/bg/2.jpg'},
-					]
-			});
-	});
-		    
-</script>
-		 -->
-		
-<script type='text/javascript'>
-   $(window).load(function() {
-       $('#featuredContent').orbit({ 
-		fluid: '16x6',
-		animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
-		animationSpeed: 600,                // how fast animtions are
-		timer: true,                        // true or false to have the timer
-		resetTimerOnClick: false,           // true resets the timer instead of pausing slideshow progress
-		advanceSpeed: 14000,                 // if timer is enabled, time between transitions
-		pauseOnHover: true,                // if you hover pauses the slider
-		startClockOnMouseOut: true,        // if clock should start on MouseOut
-		startClockOnMouseOutAfter: 1000,    // how long after MouseOut should the timer start again
-		directionalNav: true,               // manual advancing directional navs
-		captions: false,                     // do you want captions?
-//		captionAnimation: 'fade',           // fade, slideOpen, none
-//		captionAnimationSpeed: 800,         // if so how quickly should they animate in
-		bullets: true,                     // true or false to activate the bullet navigation
-		bulletThumbs: false,                // thumbnails for the bullets
-		bulletThumbLocation: '',            // location from this file where thumbs will be
-		afterSlideChange: function(){}      // empty function  
-       });
-   });
-</script>		
-
-
-<script src="<txp:site_url />txp.shoppe/foundation/fittext/jquery.fittext.js"></script>
 <script>
-  jQuery(".responsive-heading").fitText();
-</script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? '<txp:site_url />txp.shoppe/foundation/js/vendor/zepto' : '<txp:site_url />txp.shoppe/foundation/js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation.min.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.alerts.js"></script>  
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.clearing.js"></script>  
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.cookie.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.dropdown.js"></script>  
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.forms.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.joyride.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.magellan.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.orbit.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.reveal.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.section.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.tooltips.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.topbar.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.interchange.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.placeholder.js"></script>
+  <script src="<txp:site_url />txp.shoppe/foundation/js/foundation/foundation.abide.js"></script>
+  
+  <script>
+    $(document).foundation();
+  </script>
+  
+  
+  
 
+<!-- yab_shop form help -->
 <script>
 	$(document).ready(function() {
 		$("#select-size-15").change(function () {
@@ -66,19 +40,3 @@
 		})
 	});
 </script>
-
-
-<!-- Masonry 
-<script src="<txp:site_url />txp.shoppe/masonry/masonry.js"></script>
-
-<script>
-$(function(){
-  $('#product-container').masonry({
-    // options
-    itemSelector : '.product',
-    columnWidth : 240
-  });
-});
-</script>
-
--->
